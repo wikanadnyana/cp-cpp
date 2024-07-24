@@ -44,8 +44,37 @@ int main(){
     cout << "Auto copy : " << typeid(l).name() << '\n';
 
     //decltype
-    decltype(k + l) m;
+    decltype(k + l) m = 256; //k + l here means copy the TYPE only into variable m 
     cout << "Decltype : " << typeid(m).name() << " " << "Value : " << m << "\n"; 
+
+    //difference between using "/n" with "endl" is "/n" more efficient because it does not flush the buffer of output
+    //the example will combine with use case of string. String is compound of character
+
+    string hobi = "tidak nonton youtube";
+    string hobi2("tidak nonton reels");
+    string hobi3{"tidak nonton tiktok"};
+    cout << "String type : " << typeid(hobi).name() << " " << "String Value : " << hobi << endl;
+
+    //constant
+    const long long num = 30029309302909ll; //add literal constant to make the compiler directly interpret the number before assign and to avoid the type conversion issues
+
+    //try without using long long
+    cout << "Const Int : " << num << '\n';
+
+    //cpp contant not only allowed decimals num, but also hexa (base 16) & octal (base 8), for instance :
+    const int dec = 3600;
+    const int octal = 07020;
+    const int hexa = 0xE10;
+    cout << "Different base num : " << octal << " " << hexa << '\n';
+
+    //in float constant type, we can represent real number or an exponent, for instance :
+    const float avogadro = 6.02e23; // avogadro constant = 6.02 x 10^23
+    const float electron = 1.6e-19; // electric charge of an electron = 1.6 x 10^-19
+    cout << "Float Constant as Exponent : " << avogadro << " " << electron << "\n"; 
+
+    //LITERAL is fixed value written directly in the source code
+
+
 
     
 
