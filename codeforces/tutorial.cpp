@@ -31,6 +31,10 @@ int main(){
     int z{1}; //uniform initialization
     cout << "Initialization : " << x << " " << y << " " << z << "\n";
 
+    //boolean
+    bool isTrue = true;
+    cout << "Boolean : " << isTrue << '\n';
+
     //type deduction :
 
     //auto
@@ -74,8 +78,13 @@ int main(){
 
     //LITERAL is fixed value written directly in the source code
 
-
+    //line continuation :
+    string longtext = "line continuation is a way to make long string can\
+ continously type on the next line\
+ by using backslash mark"; //notes: please don't add the additional space that precedes the terminated text
+    cout << "Long String : " << longtext << '\n';
 
     
+
 
 }
