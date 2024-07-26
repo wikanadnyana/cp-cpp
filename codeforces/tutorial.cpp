@@ -84,6 +84,14 @@ int main(){
  by using backslash mark"; //notes: please don't add the additional space that precedes the terminated text
     cout << "Long String : " << longtext << '\n';
 
+
+    //another const syntax :
+    const double pi = 3.14159265358979;
+    // or maybe u can use preprocessor like :
+    #define PI 3.1415
+    #define NEWLINE '\n'
+    cout << "Const : " << pi << " Preprocessor : " << PI << NEWLINE << '\n';
+
     
 
 

@@ -3,6 +3,9 @@
 using namespace std;
 
 int main() {
-    cout << "omg" << endl;  // Ensure the output ends with a newline
-    return 0;               // Return 0 to indicate successful execution
+    int awal = 0;
+    for(int i=1; i<=5; i++){
+        awal+=i; // awal = awal + i
+    }
+    cout << awal << "\n";
 }
