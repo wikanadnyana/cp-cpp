@@ -90,7 +90,60 @@ int main(){
     // or maybe u can use preprocessor like :
     #define PI 3.1415
     #define NEWLINE '\n'
-    cout << "Const : " << pi << " Preprocessor : " << PI << NEWLINE << '\n';
+    cout << "Const : " << pi << " Preprocessor : " << PI << NEWLINE;
+
+    //operators
+
+    //assign directly a value in expression of operators
+    int num1;
+    int num2 = 5 + (num1 = 10); //that possible by directly assign a value into number 1, it similar like num1 = 10; num2 = 5 + num1
+    cout << "Print of Num 2 : " << num2 << "; Print of Num 1 : " << num1 << '\n';
+
+    //assign same value into more than 1 variables
+    int num3, num4, num5;
+    num3 = num4 = num5 = 1200; //it always assign from right to left.
+    cout << "Assign same value into 3 variables : " << num3 << " " << num4  << " " << num5 << " " << '\n';
+
+    //compound assignment
+    int price = 300000;
+    int units = 3;
+    price *= units + 1; // it similar like price = price * (units + 1)
+    cout << "Compound assignment for price : " << price << '\n';
+
+    //comparing assignment
+    int valueComparing;
+    bool comparing = ((valueComparing = 9) >= 3); //this opearation will executes to assign the value 9 into valueComparing variable first, and then continue with comparing the value 
+    cout << "Value comparing with assign : " << comparing << '\n';
+
+    //new terminology : SHORT-CIRCUIT EVALUATION
+    /*
+        when using operator && = if the left side value is already evaluated as false, the right side of the operator always be left, and the compiler will not evaluated the right side.
+        when using opeartor || = if the left side value is already evaluated as true, the right side of the operator always be true, and the compiler will not evaluated the right side.
+    
+    */
+
+   //but the problem cames up when we doing prefix increment like this :
+   int valueIncrement = 5;
+   bool shortCircuit = ((10>8) || (++valueIncrement < 33));
+   //the valueIncrement will not increase bcs the right side will not being executed.
+   cout << "Short Circuit Evaluation : " << "Bool value : " << shortCircuit << " Value Increment : " << valueIncrement << '\n';
+
+
+    //ternary
+    string ternaryResult = 310==295+15? "Bener" : "Salah";
+    cout << "Ternary Result : " << ternaryResult << '\n'; 
+
+    //comma operator
+    //useful is you having several operations, but only one expression expected. for instance : 
+    int commaOps = (commaOps = 120, commaOps++, commaOps/=11);
+    cout << "Result of Comma Operation : " << commaOps << '\n';
+    
+
+
+
+
+
+
 
     
 
