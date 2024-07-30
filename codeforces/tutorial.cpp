@@ -137,7 +137,59 @@ int main(){
     //useful is you having several operations, but only one expression expected. for instance : 
     int commaOps = (commaOps = 120, commaOps++, commaOps/=11);
     cout << "Result of Comma Operation : " << commaOps << '\n';
-    
+
+    //bitwise operators : remaining on progress
+
+
+    //explicit type casting operator
+    // = converts a data type
+    float typeCasting = 1.6875;
+    int newType = int(typeCasting);
+    cout << "Typecasting Type : " << typeid(newType).name() << " Typecasting Value : " << newType << '\n';
+
+    //sizeof
+    int integerSize = 300;
+    cout << "sizeof char : " << sizeof(char) << " " << "sizeof integer : " << sizeof(integerSize) << '\n';
+
+    //input & output :
+    int inputAngka;
+    cout << "Please type something in integer : " ;
+    cin >> inputAngka;
+    cout << "Your input is : "<< inputAngka <<'\n';
+
+    //cin more than 1 input :
+    int input1, input2;
+    cout << "Multiple input : ";
+    cin >> input1 >> input2;
+    cout << "Result of multiple input : " << input1 << " " << input2 << '\n';
+
+    // using getline :
+    string testGetline;
+    cout << "Input a String using Getline : ";
+    getline(cin, testGetline);
+    cout << "Output getline : " << testGetline << '\n';
+
+    //stringstream : that's usefull for changing type of the user input from string into integers.
+    //it's better to control the flow of inputing process, when user inputing something, we only get the line of the input, the user can input anything, and then we have to transform it using stringstreams.
+    string strExpense, strIncome;
+    int intExpense, intIncome;
+    cout << "Your expense : ";
+    getline(cin, strExpense);
+    cout << "Your income : ";
+    getline(cin, strIncome);
+
+    stringstream(strExpense) >> intExpense;
+    stringstream(strIncome) >> intIncome;
+
+    cout << "Your remaining money : " << intIncome - intExpense << '\n';
+
+
+
+
+
+
+
+
 
 
 
