@@ -2,32 +2,23 @@
 
 using namespace std;
 
-void solve(){
+void solve() {
     string s;
     cin>>s;
-    int count = 0, start, end;
-    for(int i=0; i < s.size(); i++){
-        if(s[i] == s[i+1]){
-            count++;
-            if(count == 1){
-                start = i;
-            }
+    for(int i = 0; i < s.size(); i++){
+        if(s[i] == s[i-1]){
+            cout << s.substr(0, i) << (s[i] == 'a'? 'b' : 'a') << s.substr(i) << '\n';
+            return;
         }
     }
-    end = start + count;
-    if(count==0){
-        s.insert(s.size(), 1, 'w');
-    }else{
-        s.insert(((start + end)/2) + 1, 1, 'w');
-    }
-    cout<<s<<'\n';
-
+    s += s.back() == 'a' ? 'b' : 'a';
+    cout << s << '\n';
 }
 
-int main(){
+int main() {
     int t;
-    cin>>t;
-    while(t--){
+    cin >> t;
+    while (t--) {
         solve();
     }
     return 0;
